@@ -6,3 +6,4 @@
 
 ### NOTE:
 - This CLI will not work on windows.
+- You need to run `pip install termcolor` as it is used for some things of this cli.
