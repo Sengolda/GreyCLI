@@ -13,17 +13,18 @@ to_print = """
 """
 
 print(colored(to_print, 'cyan'))
-random_choiced_name = f'setup-{random.randint(1, 999)}'
+random_choiced_name = f'setup-{random.randint(100, 999)}'
 supported_systems = ('darwin','linux')
 
 token = input(colored("Token:", 'green'))
 
-if sys.platform in supported_systems:
-    subprocess.run(f"git clone https://github.com/Sengolda/greybot.git && mv greybot {random_choiced_name}", shell=True)
-    subprocess.run(f'cd {random_choiced_name} && rm -f env.example', shell=True)
-    subprocess.run(f"echo token={str(token)} > {random_choiced_name}/env", shell=True)
+with open("output.txt","w") as f:
+    if sys.platform in supported_systems:
+        subprocess.run(f"git clone https://github.com/Sengolda/greybot.git && mv greybot {random_choiced_name}", shell=True, text=True, capture_output=True)
+        subprocess.run(f'cd {random_choiced_name} && rm -f env.example', shell=True, text=True, capture_output=True)
+        subprocess.run(f"echo token={str(token)} > {random_choiced_name}/env", shell=True, text=True, capture_output=True)
 
-    print(colored('[+] Added env file.', 'green'))
-    print(colored(f'[+] Success, your template is ready\nto start it just do `cd {random_choiced_name} && sh startbot.sh`', 'green'))
-else:
-    print(f"Sorry, your system is not supported by GreyCLI.")
+        print(colored('[+] Added env file.', 'green'))
+        print(colored(f'[+] Success, your template is ready\nto start it just do `cd {random_choiced_name} && sh startbot.sh`', 'green'))
+    else:
+        print(f"Sorry, your system is not supported by GreyCLI.")
