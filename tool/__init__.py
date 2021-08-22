@@ -13,7 +13,7 @@ to_print = """
 """
 
 print(colored(to_print, 'cyan'))
-random_choiced_name = f'setup-{random.randint(100, 999)}'
+random_choiced_name = f'setup-{random.randint(1, 999)}'
 supported_systems = ('darwin','linux')
 
 token = input(colored("Token:", 'green'))
