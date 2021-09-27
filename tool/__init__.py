@@ -14,7 +14,7 @@ to_print = """
 
 print(colored(to_print, 'cyan'))
 random_choiced_name = f'setup-{random.randint(1, 999)}'
-supported_systems = ('darwin','linux')
+supported_systems = ('darwin','linux', 'win32')
 
 token = input(colored("Token:", 'green'))
 
