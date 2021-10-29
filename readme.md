@@ -5,5 +5,4 @@
 - Clone this repo and cd to it and run `python3 main.py`, this will gen your project.
 
 ### NOTE:
-- This CLI will not work on windows.
 - You need to run `pip install termcolor` as it is used for some things of this cli.
