@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "greycli"
+version = "0.1.0"
+description = ""
+authors = ["Sengolda"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+click = "*"
+
+[tool.poetry.scripts]
+greybotsetup = "greycli._script:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
