@@ -50,7 +50,7 @@ def main(name, force):
 
         click.echo("[+] Added env file.")
         click.echo(
-            f"[+] Success, your template is ready\nto start it just do `cd {name} && sh startbot.sh`",
+            f"[+] Success, your template is ready\nto start it just do `cd {name} && pip install -Ur requirements.txt && python3 launch.py`",
         )
     else:
         print("Sorry, your system is not supported by GreyCLI.")
