@@ -16,3 +16,5 @@ Optionally if you are on `MacOS/Linux` you can install `uvloop` to get a faster 
 ```bash
 pip install -U uvloop
 ```
+
+**NOTE:** There is currently no Windows support only `MacOS/Linux`
