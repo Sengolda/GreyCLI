@@ -45,7 +45,7 @@ def main(name, force):
         run_cmd(f"cd {name} && rm -f config.py.example")
         config = config_template.format(token, user_id)
         run_cmd(f"touch {name}/config.py")
-        with open(f"{name}/config.py", "w") as f:
+        with click.open_file(f"{name}/config.py", "w") as f:
             f.write(config)
 
         click.echo("[+] Added env file.")
