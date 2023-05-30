@@ -53,7 +53,7 @@ def main(name, force):
             f"[+] Success, your template is ready\nto start it just do `cd {name} && pip install -Ur requirements.txt && python3 launch.py`",
         )
     else:
-        print("Sorry, your system is not supported by GreyCLI.")
+        click.echo("Sorry, your system is not supported by GreyCLI.")
 
 
 if __name__ == "__main__":
