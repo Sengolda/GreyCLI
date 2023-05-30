@@ -22,7 +22,7 @@ OWNER_IDS=[{}]
 
 
 @click.command()
-@click.option("--name", help="Name of your project", default=None)
+@click.argument("name")
 @click.option(
     "--force",
     is_flag=True,

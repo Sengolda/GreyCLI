@@ -9,7 +9,7 @@ pip install -U git+https://github.com/Sengolda/GreyCLI#egg=greycli
 ```
 - To run just do:
 ```bash
-greybotsetup --name=MyAwesomeBot
+greybotsetup myawesomebot
 ```
 
 Optionally if you are on `MacOS/Linux` you can install `uvloop` to get a faster asyncio event loop
